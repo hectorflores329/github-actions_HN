@@ -7,13 +7,17 @@ def update():
     return
 
 def descargarDatos():
-    url1 = "https://onedrive.live.com/download.aspx?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!92347&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel"
-    # for i in range (1):
+    # Filename: Covid HN
+    covid = "https://onedrive.live.com/download.aspx?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!92347&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel"
+    
+    # Filename: LOCALIZA HN
+    localiza = "https://onedrive.live.com/download?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!62378&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel"
 
-    nameFile = "url" + str(1)
+    df = pd.read_excel(covid)
+    df.to_excel("Covid HN.xlsx")
 
-    df = pd.read_excel(nameFile)
-    df.to_excel("file2.xlsx")
+    df = pd.read_excel(localiza)
+    df.to_excel("LOCALIZA HN.xlsx")
 
     return
 

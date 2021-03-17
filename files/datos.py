@@ -15,8 +15,7 @@ def descargarDatos():
     # localiza = "https://onedrive.live.com/download?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!62378&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel"
 
     # df = pd.read_excel(covid)
-    new_df = urllib.request.urlretrieve(covid, "Covid HN.xlsx")
-    new_df
+    urllib.request.urlretrieve(covid, "Covid HN.xlsx")
 
     # df = pd.read_excel(localiza)
     # df.to_excel("LOCALIZA HN.xlsx")

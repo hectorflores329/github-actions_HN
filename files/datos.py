@@ -40,7 +40,7 @@ def descargarDatos():
 
     # Downloading files
     urllib.request.urlretrieve(covid, "Covid HN.xlsx")
-    urllib.request.urlretrieve(localiza, "Covid HN.xlsx")
+    urllib.request.urlretrieve(localiza, "LOCALIZA HN.xlsx")
     urllib.request.urlretrieve(salud, "SALUD_HN.xlsx")
     urllib.request.urlretrieve(farmacias, "FARMACIAS_HN.xlsx")
     urllib.request.urlretrieve(datos_rrss, "DATOS RRSS HN.xlsx")

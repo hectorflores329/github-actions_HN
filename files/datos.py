@@ -8,20 +8,14 @@ def update():
     return
 
 def descargarDatos():
-    df = pd.read_csv("https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/Geo2_NI_provinces_.csv")
-    df.to_excel("new_file.xlsx")
+    df = pd.read_excel("https://onedrive.live.com/download.aspx?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!92347&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel")
+    df.to_excel("file1.xlsx")
 
     return
 
-def numerar():
-    for i in range(10):
-        print(i)
-
-def fechaActualizacion():
-    f = open ('holamundo.txt','wb')
-    f.write(bytes(datetime.datetime.now().strftime("La fecha de actualización es: %m/%d/%Y, %H:%M:%S"), 'utf-8'))
-    f.close()
 
 if __name__ == '__main__':
     print('Empezando proceso de descarga.')
+    update()
+    print('El roceso de descarga ha finalizado.')
     

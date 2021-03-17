@@ -10,7 +10,9 @@ def descargarDatos():
     url1 = "https://onedrive.live.com/download.aspx?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!92347&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel"
     # for i in range (1):
 
-    df = pd.read_excel(url1)
+    nameFile = "url" + str(1)
+
+    df = pd.read_excel(nameFile)
     df.to_excel("file2.xlsx")
 
     return

@@ -3,8 +3,6 @@ import datetime
 
 def update():
     descargarDatos()
-    fechaActualizacion()
-
     return
 
 def descargarDatos():

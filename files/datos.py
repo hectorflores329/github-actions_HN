@@ -3,9 +3,9 @@ import datetime
 import urllib.request
 
 def update():
-    descargarDatos()
+    # descargarDatos()
     getKeys()
-    
+
     return
 
 def descargarDatos():
@@ -54,9 +54,10 @@ def descargarDatos():
     return
 
 def getKeys():
-    f = open('C://key.json','r')
+    f = open('key.json','r')
     keys = f.read()
     jkeys = json.loads(keys)
+
     return jkeys
 
 if __name__ == '__main__':

@@ -1,5 +1,5 @@
 def prod33():
-    f = open('file.txt','r')
+    f = open('file.json','r')
     print(f.read())
     f.close()
     return 

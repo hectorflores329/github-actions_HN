@@ -40,7 +40,6 @@ jobs:
 
       run: |
         echo $TEXTO1$CODE1$TEXTO2$CODE2$TEXTO3$CODE3$TEXTO4$CODE4$TEXTO5 > keys.json
-        echo $(<keys.json)
 
         python Propio.py
         python datos.py

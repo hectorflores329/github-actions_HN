@@ -39,8 +39,8 @@ jobs:
         TEXTO5: '"},"correo":{"username" : "informaticasudaustral@gmail.com","password" : "Sud.Info91"}}'
 
       run: |
-        echo $TEXTO1$CODE1$TEXTO2$CODE2$TEXTO3$CODE3$TEXTO4$CODE4$TEXTO5 > file.txt
-        echo $(<file.txt)
+        echo $TEXTO1$CODE1$TEXTO2$CODE2$TEXTO3$CODE3$TEXTO4$CODE4$TEXTO5 > file.json
+        echo $(<file.json)
 
         python Propio.py
         python datos.py

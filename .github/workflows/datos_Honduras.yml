@@ -34,8 +34,8 @@ jobs:
 
         python Propio.py
 
-        cp file.txt seguridad.txt
-        rm file.txt
+ #       cp file.txt seguridad.txt
+ #       rm file.txt
 
     - name: Ejecutando archivo de descarga
       run: |

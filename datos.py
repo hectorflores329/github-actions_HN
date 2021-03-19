@@ -37,26 +37,6 @@ def update():
 
     return
 
-'''def guardarRepositorio():
-    #Esta linea crea un objeto para manejar el repositorio alojado en la ruta
-    #Correspondinete al argumento entregado en String
-    repoLocal = git.Repo('C:\Users\hecto\Documents\GitHub\github-actions_HN')  
-    try:
-        #Agrego todos los archivos nuevos
-        repoLocal.git.add(".")
-        #Hace el commit con un comentario sobre el origen del mismo y la hora
-        repoLocal.git.commit(m='Update automatico via Actualizar ' + datetime.datetime.now().strftime("%m-%d-%Y %H-%M-%S"))
-        #Apuntamos al gitHub (online)
-        origin = repoLocal.remote(name='origin')
-        #Se hace el push (enviar los archivos al repositorio online)
-        origin.push()
-        #Mensaje simpatico que todo salio bien
-        print("Repositorio actualizado =)")
-    except:
-        #Da un mensaje de error al fallar
-        print("Error de GITHUB")    
-    return'''
-
 def guardarDataCovid():
     # Filename: Covid HN
     covid = "https://onedrive.live.com/download.aspx?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!92347&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel"

@@ -2,6 +2,7 @@ import pandas as pd
 import datetime
 import urllib.request
 import json
+import tweepy
 
 def update():
     descargarDatos()

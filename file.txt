@@ -1,1 +1,1 @@
-Los códigos son: 1 2
+{"twitter":{"token_acceso" : " 1 ","secreto_token_acceso" : " 2 ","clave_api" : " 2 ","clave_secreta_api" : " 2 "},"correo":{"username" : "informaticasudaustral@gmail.com","password" : "Sud.Info91"}}

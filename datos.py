@@ -3,8 +3,7 @@ import datetime
 import urllib.request
 
 def update():
-    # descargarDatos()
-    getKeys()
+    descargarDatos()
 
     return
 

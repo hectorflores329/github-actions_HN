@@ -6,11 +6,6 @@ import tweepy
 
 def update():
     descargarDatos()
-    getKeys()
-    FechaTweeter(palabra)
-    depurarFuenteTweet(palabra)
-    APITWEET()
-    get_tweetConFecha(user, api = APITWEET())
 
     return
 
@@ -120,29 +115,28 @@ def get_tweetConFecha(user, api = APITWEET()):
     return list(api.user_timeline(screen_name = user, count= 10))
 
 
-lista = get_tweetConFecha("cristiano")
-salida = []
-for i in lista:  
-    jsonObject = i._json.copy()
-    datos = {
-                "Contenido" : jsonObject["text"], 
-                "IR" : "https://twitter.com/i/web/status/" + jsonObject["id_str"], 
-                "Fecha" : FechaTweeter(jsonObject["created_at"]).strftime("%d/%m/%Y %H:%M:%S"),
-                "Dispositivo" : depurarFuenteTweet(jsonObject["source"]),
-                "Likes" : jsonObject["favorite_count"],
-                "Retweets" : jsonObject["retweet_count"],
-                "Entidad" : jsonObject["user"]["name"],
-                "Hora" : FechaTweeter(jsonObject["created_at"]).strftime("%H:%M:%S"),
-                "Foto": jsonObject["user"]["profile_image_url"].replace("_normal.","."),
-                "FechaAux": FechaTweeter(jsonObject["created_at"])
-            }
-    salida.append(datos.copy())
-
-data = pd.DataFrame(salida)
-data.to_excel("final.xlsx", index=False)
-
 if __name__ == '__main__':
     print('Empezando proceso de descarga.')
     update()
     print('El roceso de descarga ha finalizado.')
-    
+
+    lista = get_tweetConFecha("cristiano")
+    salida = []
+    for i in lista:  
+        jsonObject = i._json.copy()
+        datos = {
+                    "Contenido" : jsonObject["text"], 
+                    "IR" : "https://twitter.com/i/web/status/" + jsonObject["id_str"], 
+                    "Fecha" : FechaTweeter(jsonObject["created_at"]).strftime("%d/%m/%Y %H:%M:%S"),
+                    "Dispositivo" : depurarFuenteTweet(jsonObject["source"]),
+                    "Likes" : jsonObject["favorite_count"],
+                    "Retweets" : jsonObject["retweet_count"],
+                    "Entidad" : jsonObject["user"]["name"],
+                    "Hora" : FechaTweeter(jsonObject["created_at"]).strftime("%H:%M:%S"),
+                    "Foto": jsonObject["user"]["profile_image_url"].replace("_normal.","."),
+                    "FechaAux": FechaTweeter(jsonObject["created_at"])
+                }
+        salida.append(datos.copy())
+
+    data = pd.DataFrame(salida)
+    data.to_excel("final.xlsx", index=False)        

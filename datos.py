@@ -33,11 +33,11 @@ def update():
         print("Los datos de datacovid se cargaron correctamente...")
     except:
         print("Error al cargar los archivos del la organizacion")
-    guardarRepositorio()
+    # guardarRepositorio()
 
     return
 
-def guardarRepositorio():
+'''def guardarRepositorio():
     #Esta linea crea un objeto para manejar el repositorio alojado en la ruta
     #Correspondinete al argumento entregado en String
     repoLocal = git.Repo('C:\Users\hecto\Documents\GitHub\github-actions_HN')  
@@ -55,7 +55,7 @@ def guardarRepositorio():
     except:
         #Da un mensaje de error al fallar
         print("Error de GITHUB")    
-    return
+    return'''
 
 def guardarDataCovid():
     # Filename: Covid HN

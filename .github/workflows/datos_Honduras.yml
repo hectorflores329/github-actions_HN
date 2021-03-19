@@ -33,10 +33,7 @@ jobs:
         echo $(<file.txt)
 
         python Propio.py
-
- #       cp file.txt seguridad.txt
- #       rm file.txt
-
+        
         cd files
         python datos.py
 

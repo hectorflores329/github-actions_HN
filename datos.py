@@ -53,13 +53,6 @@ def descargarDatos():
 
     return
 
-def getKeys():
-    f = open('key.json','r')
-    keys = f.read()
-    jkeys = json.loads(keys)
-
-    return jkeys
-
 if __name__ == '__main__':
     print('Empezando proceso de descarga.')
     update()

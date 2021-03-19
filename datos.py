@@ -6,6 +6,7 @@ import tweepy
 
 def update():
     descargarDatos()
+    generarArchivo()
 
     return
 
@@ -115,10 +116,7 @@ def get_tweetConFecha(user, api = APITWEET()):
     return list(api.user_timeline(screen_name = user, count= 10))
 
 
-if __name__ == '__main__':
-    print('Empezando proceso de descarga.')
-    update()
-    print('El roceso de descarga ha finalizado.')
+def generarArchivo():
 
     lista = get_tweetConFecha("cristiano")
     salida = []
@@ -139,4 +137,9 @@ if __name__ == '__main__':
         salida.append(datos.copy())
 
     data = pd.DataFrame(salida)
-    data.to_excel("final.xlsx", index=False)        
+    data.to_excel("final.xlsx", index=False)
+
+if __name__ == '__main__':
+    print('Empezando proceso de descarga.')
+    update()
+    print('El roceso de descarga ha finalizado.')

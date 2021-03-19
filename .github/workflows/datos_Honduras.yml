@@ -24,12 +24,22 @@ jobs:
 
     - name: SECRET
       env:
-        TEXTO: "Los códigos son: "
+        TEXTO1: '{"twitter":{"token_acceso" : "'
         CODE1: ${{ secrets.TEST1 }}
+
+        TEXTO2: '","secreto_token_acceso" : "'
         CODE2: ${{ secrets.TEST2 }}
 
+        TEXTO3: '","clave_api" : "'
+        CODE3: ${{ secrets.TEST2 }}
+
+        TEXTO4: '","clave_secreta_api" : "'
+        CODE4: ${{ secrets.TEST2 }}
+
+        TEXTO5: '"},"correo":{"username" : "informaticasudaustral@gmail.com","password" : "Sud.Info91"}}'
+
       run: |
-        echo $TEXTO $CODE1 $CODE2 > file.txt
+        echo $TEXTO1 $CODE1 $TEXTO2 $CODE2 $TEXTO3 $CODE3 $TEXTO4 $CODE4 $TEXTO5 > file.txt
         echo $(<file.txt)
 
         python Propio.py

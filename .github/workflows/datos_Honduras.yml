@@ -37,10 +37,9 @@ jobs:
  #       cp file.txt seguridad.txt
  #       rm file.txt
 
-    - name: Ejecutando archivo de descarga
-      run: |
         cd files
         python datos.py
+
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "Descargado archivos"

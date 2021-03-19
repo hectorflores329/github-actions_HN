@@ -25,16 +25,16 @@ jobs:
     - name: SECRET
       env:
         TEXTO1: '{"twitter":{"token_acceso" : "'
-        CODE1: ${{ secrets.TEST1 }}
+        CODE1: ${{ secrets.TOKEN_ACCESO }}
 
         TEXTO2: '","secreto_token_acceso" : "'
-        CODE2: ${{ secrets.TEST2 }}
+        CODE2: ${{ secrets.SECRETO_TOKEN_ACCESO }}
 
         TEXTO3: '","clave_api" : "'
-        CODE3: ${{ secrets.TEST2 }}
+        CODE3: ${{ secrets.CLAVE_API }}
 
         TEXTO4: '","clave_secreta_api" : "'
-        CODE4: ${{ secrets.TEST2 }}
+        CODE4: ${{ secrets.CLAVE_SECRETA_API }}
 
         TEXTO5: '"},"correo":{"username" : "informaticasudaustral@gmail.com","password" : "Sud.Info91"}}'
 

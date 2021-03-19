@@ -164,7 +164,9 @@ def definirDatasetPorCuenta(cuenta):
         salida.append(datos.copy())
 
     data = pd.DataFrame(salida)
-    data.to_excel("final.xlsx", index=False)
+    # data.to_excel("final.xlsx", index=False)
+
+    return data
 
 def datasetFinalTweet():
     cuentas = [

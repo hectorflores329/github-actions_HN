@@ -33,6 +33,7 @@ jobs:
         echo $(<file.txt)
 
         python Propio.py
+        python datos.py
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:

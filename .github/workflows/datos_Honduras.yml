@@ -1,12 +1,12 @@
 name: Honduras
 
 on:
-    #push
+    push
   # github runners are on GMT
     schedule:
       # run every day at 15:00 chilito
       # OBS: Cada 3/ horas
-      - cron:  '*/5 * * * *'
+      # - cron:  '*/5 * * * *'
   
 jobs:
   build:

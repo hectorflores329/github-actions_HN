@@ -181,7 +181,7 @@ def datasetFinalTweet():
     data = data.sort_values(by=['FechaAux'])
     del data["FechaAux"]
     # data.to_csv("../Datos_Honduras/tweeter/tweeter.csv", index=False)
-    data.to_csv("Bing\News\tweeter.csv", index=False)
+    data.to_csv("C:/Users/hecto/Documents/GitHub/github-actions_HN/Bing/Newstweeter.csv", index=False)
     return data
 
 def fechaCorrecta(i):

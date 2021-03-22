@@ -19,7 +19,8 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64
 def update():
     print("Comenzó...")
     try:
-        datasetFinalTweet()
+        # datasetFinalTweet()
+        # Comentarla para no cargar el API.
         print("Los tweet se cargaron correctamente...")
     except:
         print("Error al cargar los Tweet")
@@ -237,7 +238,7 @@ def bingNews(pais = "Honduras"):
     data = pd.DataFrame(salida)[["name","url","description","datePublished","imagen","pais","Fuente"]]
     data["datePublished"] = data["datePublished"].apply(fechaCorrecta)
     data["imagen"] = data["imagen"].apply(reemplazarFinal)
-    data[::-1].to_csv("../Datos_Honduras/bing/News/Honduras.csv",index=False)
+    data[::-1].to_csv("Honduras.csv",index=False)
     return
 
 

@@ -19,7 +19,7 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64
 def update():
     print("Comenzó...")
     try:
-        # datasetFinalTweet()
+        datasetFinalTweet()
         # Comentarla para no cargar el API.
         print("Los tweet se cargaron correctamente...")
     except:

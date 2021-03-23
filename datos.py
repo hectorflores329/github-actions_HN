@@ -19,7 +19,7 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64
 def update():
     print("Comenzó...")
     try:
-        datasetFinalTweet()
+        # datasetFinalTweet()
         # Comentarla para no cargar el API.
         print("Los tweet se cargaron correctamente...")
     except:
@@ -70,16 +70,16 @@ def guardarDataCovid():
     economicos = "https://onedrive.live.com/download?cid=9f999e057ad8c646&page=view&resid=9F999E057AD8C646!62658&parId=9F999E057AD8C646!62371&authkey=!AkePW7UW1KXQkMM&app=Excel"
 
     # Downloading files
-    urllib.request.urlretrieve(covid, "Covid HN.xlsx")
-    urllib.request.urlretrieve(localiza, "LOCALIZA HN.xlsx")
-    urllib.request.urlretrieve(salud, "SALUD_HN.xlsx")
-    urllib.request.urlretrieve(farmacias, "FARMACIAS_HN.xlsx")
-    urllib.request.urlretrieve(datos_rrss, "DATOS RRSS HN.xlsx")
-    urllib.request.urlretrieve(pacientes, "Condición_Pacientes_HN.xlsx")
-    urllib.request.urlretrieve(alimentacion, "ALIMENTACION_HN.xlsx")
-    urllib.request.urlretrieve(cuarentena, "00 DATACOVID_HN_CUARENTENA.xlsx")
-    urllib.request.urlretrieve(trabajo, "00 DATACOVID Trabajo_HN.xlsx")
-    urllib.request.urlretrieve(economicos, "Indicadores_Economicos.xlsx")
+    urllib.request.urlretrieve(covid, "datacovidhn/Covid HN.xlsx")
+    urllib.request.urlretrieve(localiza, "datacovidhn/LOCALIZA HN.xlsx")
+    urllib.request.urlretrieve(salud, "datacovidhn/SALUD_HN.xlsx")
+    urllib.request.urlretrieve(farmacias, "datacovidhn/FARMACIAS_HN.xlsx")
+    urllib.request.urlretrieve(datos_rrss, "datacovidhn/DATOS RRSS HN.xlsx")
+    urllib.request.urlretrieve(pacientes, "datacovidhn/Condición_Pacientes_HN.xlsx")
+    urllib.request.urlretrieve(alimentacion, "datacovidhn/ALIMENTACION_HN.xlsx")
+    urllib.request.urlretrieve(cuarentena, "datacovidhn/00 DATACOVID_HN_CUARENTENA.xlsx")
+    urllib.request.urlretrieve(trabajo, "datacovidhn/00 DATACOVID Trabajo_HN.xlsx")
+    urllib.request.urlretrieve(economicos, "datacovidhn/Indicadores_Economicos.xlsx")
 
     return
 
@@ -238,7 +238,7 @@ def bingNews(pais = "Honduras"):
     data = pd.DataFrame(salida)[["name","url","description","datePublished","imagen","pais","Fuente"]]
     data["datePublished"] = data["datePublished"].apply(fechaCorrecta)
     data["imagen"] = data["imagen"].apply(reemplazarFinal)
-    data[::-1].to_csv("Honduras.csv",index=False)
+    data[::-1].to_csv("Bing/News/Honduras.csv",index=False)
     return
 
 

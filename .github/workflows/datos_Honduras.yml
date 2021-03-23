@@ -3,7 +3,7 @@ name: Honduras
 on:
     #push
   # github runners are on GMT
-    #schedule:
+    schedule:
       # run every day at 15:00 chilito
       # OBS: Cada 3/ horas
       # At minute 0 past every 3rd hour
